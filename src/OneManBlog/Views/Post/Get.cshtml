@@ -1,0 +1,23 @@
+﻿@model OneManBlog.Model.PostModel
+
+@{
+    ViewBag.Title = "Home Page";
+}
+<html>
+<head>
+    <title>
+        @ViewBag.Title
+    </title>
+    <link href="/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="/css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <h1>@Model.Slug</h1>
+        <div>@Model.Content</div>
+        @Component.Invoke("PostList", "Other blog posts")
+    </div>
+    <script src="/lib/jquery/jquery.js"></script>
+    <script src="/lib/bootstrap/js/bootstrap.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+﻿    @model IEnumerable<OneManBlog.Model.PostModel>
+    <div>
+        <h3>@ViewBag.Title</h3>
+        <ul>
+            @foreach (var item in Model)
+                {
+                <li>@Html.ActionLink(item.Slug, "Index", "Post", new { slug = item.Slug })</li>
+            }
+        </ul>
+    </div>

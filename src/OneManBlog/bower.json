@@ -1,0 +1,14 @@
+{
+    "name": "OneManBlog",
+    "private": true,
+    "dependencies": {
+        "bootstrap": "3.3.2"
+    },
+    "exportsOverride": {
+        "bootstrap": {
+            "js":  "dist/js/*.*",
+            "css":  "dist/css/*.*",
+            "fonts":  "dist/fonts/*.*"
+        }
+    }
+}

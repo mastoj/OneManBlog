@@ -1,0 +1,20 @@
+﻿    @model OneManBlog.Model.PostModel
+
+    <html>
+    <head>
+        <title>
+            @Model.Slug
+        </title>
+        <link href="/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+        <link href="/css/site.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>@Model.Slug</h1>
+            <div>@Model.Content</div>
+            @Component.Invoke("PostList", "Blog posts")
+        </div>
+        <script src="/lib/jquery/jquery.js"></script>
+        <script src="/lib/bootstrap/js/bootstrap.js"></script>
+    </body>
+    </html>
