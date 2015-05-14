@@ -120,3 +120,5 @@ _configs/
 wwwroot
 bower_components
 output
+
+.vs
