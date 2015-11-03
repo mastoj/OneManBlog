@@ -11,6 +11,9 @@ module.exports = function (grunt) {
             }
         }
     });
+    grunt.registerTask("webpack", "webpack", function() {
+        console.log("hello from task");
+    });
     grunt.registerTask("default", ["bower:install"]);
     grunt.loadNpmTasks("grunt-bower-task");
 };

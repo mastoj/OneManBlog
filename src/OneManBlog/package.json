@@ -1,8 +1,13 @@
 {
     "version": "0.0.0",
-    "name": "",
+  "name": "",
+  "scripts": {
+    "webpack": "webpack ./app/entry.js ./dist/bundle.js --display-error-details"
+  },
     "devDependencies": {
         "grunt": "0.4.5",
-        "grunt-bower-task": "0.4.0"
+        "grunt-bower-task": "0.4.0",
+      "webpack": "^1.12.2",
+      "grunt-webpack": "^1.0.11"
     }
 }
