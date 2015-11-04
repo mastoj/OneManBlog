@@ -10,5 +10,11 @@ namespace OneManBlog.Controllers
         {
             return View();
         }
+
+        [Route("[action]"), Route("")]
+        public IActionResult React()
+        {
+            return View();
+        }
     }
 }
