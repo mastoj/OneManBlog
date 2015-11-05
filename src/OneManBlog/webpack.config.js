@@ -1,5 +1,7 @@
 var webpack = require('webpack');
-
+var path = require('path');
+//var outPath = path.resolve(__dirname, "./wwwroot/app/bundle.js");
+var outFolder = path.resolve(__dirname, "./wwwroot/app");
 module.exports = {
     entry: [
       'webpack-dev-server/client?http://0.0.0.0:3000', // WebpackDevServer host and port
@@ -7,16 +9,22 @@ module.exports = {
       './app/index.jsx' // Your appʼs entry point
     ],
     output: {
-        path: __dirname,
-        filename: "/wwwroot/app/bundle.js"
+        path: outFolder,
+        filename: "bundle.js",
+        //filename: "/wwwroot/app/bundle.js"
+        publicPath: 'http://localhost:3000/static/'
     },
     module: {
+        exclude: /node_modules/,
         loaders: [
-            { test: /\.jsx$/, loaders: ['react-hot', 'babel'] },
+            { test: /\.jsx$/, loaders: ['react-hot', 'babel?experimental'] },
             { test: /\.css$/, loader: "style!css" }
         ]
     },
     plugins: [
       new webpack.HotModuleReplacementPlugin()
-    ]
+    ],
+    resolve: {
+      extensions: ["", ".webpack.js", ".web.js", ".js", ".jsx"]
+    }
 };
